@@ -1,11 +1,11 @@
 package org.example;
-
+import java.sql.DriverManager;
 import java.sql.*;
 
 public class Database {
     public void coffeeprod(){
         try (
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coffee_db", "root", "Barthur2254!")) {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coffee_db", "root", "Mathmilo1996")) {
             String SQL= "SELECT COF_NAME FROM coffees";
 
             Statement stmt = con.createStatement();
@@ -21,7 +21,7 @@ public class Database {
     }
 public void coffeepricename(){
     try (
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coffee_db", "root", "Barthur2254!")) {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/coffee_db", "root", "Mathmilo1996")) {
         String nameprice= "SELECT COF_NAME, PRICE \n" +
                 "FROM coffees\n" +
                 "WHERE PRICE =8.99 or PRICE >9\n" +
